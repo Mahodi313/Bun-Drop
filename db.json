@@ -1,0 +1,204 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "title": "Classic Burger",
+      "price": 8.99,
+      "description": "A classic beef burger with lettuce, tomato, and cheese.",
+      "category": "burgers",
+      "image": "/public/images/classicburger.png"
+    },
+    {
+      "id": 2,
+      "title": "Cheeseburger",
+      "price": 9.49,
+      "description": "A juicy cheeseburger with melted cheddar cheese.",
+      "category": "burgers",
+      "image": "/public/images/cheeseburger.png"
+    },
+    {
+      "id": 3,
+      "title": "Bacon Burger",
+      "price": 10.99,
+      "description": "A beef burger topped with crispy bacon and BBQ sauce.",
+      "category": "burgers",
+      "image": "/public/images/baconburger.png"
+    },
+    {
+      "id": 4,
+      "title": "Salad Wrap Burger",
+      "price": 7.99,
+      "description": "A delicious burger with a lettuce wrap.",
+      "category": "burgers",
+      "image": "/public/images/saladwrapburger.png"
+    },
+    {
+      "id": 5,
+      "title": "Mushroom Swiss Burger",
+      "price": 11.49,
+      "description": "A beef burger topped with sautéed mushrooms and Swiss cheese.",
+      "category": "burgers",
+      "image": "/public/images/mushroomburger.png"
+    },
+    {
+      "id": 6,
+      "title": "Double Cheeseburger",
+      "price": 12.99,
+      "description": "A double patty burger with double the cheese.",
+      "category": "burgers",
+      "image": "/public/images/doublecheeseburger.png"
+    },
+    {
+      "id": 7,
+      "title": "BBQ Burger",
+      "price": 9.99,
+      "description": "A beef burger with BBQ sauce and onion rings.",
+      "category": "burgers",
+      "image": "/public/images/bbqburger.png"
+    },
+    {
+      "id": 8,
+      "title": "Spicy Chicken Burger",
+      "price": 8.49,
+      "description": "A crispy chicken burger with spicy mayo and jalapenos.",
+      "category": "burgers",
+      "image": "/public/images/spicychickenburger.png"
+    },
+    {
+      "id": 9,
+      "title": "Fish Burger",
+      "price": 9.99,
+      "description": "A crispy fish fillet burger with tartar sauce.",
+      "category": "burgers",
+      "image": "/public/images/fishburger.png"
+    },
+    {
+      "id": 10,
+      "title": "Sweet Potato Fries",
+      "price": 4.99,
+      "description": "Crispy sweet potato fries topped with fresh parsley.",
+      "category": "sides",
+      "image": "/public/images/sweetpotatofries.png"
+    },
+    {
+      "id": 11,
+      "title": "Onion Rings",
+      "price": 3.99,
+      "description": "Golden, crispy onion rings served with dipping sauce.",
+      "category": "sides",
+      "image": "/public/images/onionrings.png"
+    },
+    {
+      "id": 12,
+      "title": "French Fries",
+      "price": 5.49,
+      "description": "Original crispy potato fries.",
+      "category": "sides",
+      "image": "/public/images/frenchfries.png"
+    },
+    {
+      "id": 13,
+      "title": "Apples",
+      "price": 2.99,
+      "description": "Fresh Sliced Apples.",
+      "category": "sides",
+      "image": "/public/images/apples.png"
+    },
+    {
+      "id": 14,
+      "title": "Cola",
+      "price": 1.99,
+      "description": "Chilled Cola Drink.",
+      "category": "drinks",
+      "image": "/public/images/cola.png"
+    },
+    {
+      "id": 15,
+      "title": "Mango & Passion Smoothie",
+      "price": 2.49,
+      "description": "Smoothie with freshly squeezed mango and passion fruit.",
+      "category": "drinks",
+      "image": "/public/images/smoothie1.png"
+    },
+    {
+      "id": 16,
+      "title": "Mixed Berry Smoothie",
+      "price": 2.29,
+      "description": "Smoothie with with different types of berries.",
+      "category": "drinks",
+      "image": "/public/images/smoothie2.png"
+    },
+    {
+      "id": 17,
+      "title": "Veggie Smoothie",
+      "price": 3.99,
+      "description": "Green and healthy smoothie.",
+      "category": "drinks",
+      "image": "/public/images/smoothie3.png"
+    },
+    {
+      "id": 18,
+      "title": "Spicy Mayonnaise",
+      "price": 0.5,
+      "description": "Spicy version of the mayonnaise.",
+      "category": "dressings",
+      "image": "/public/images/spicymayo.png"
+    },
+    {
+      "id": 19,
+      "title": "Mustard",
+      "price": 0.5,
+      "description": "Traditional yellow mustard.",
+      "category": "dressings",
+      "image": "/public/images/mustard.png"
+    },
+    {
+      "id": 20,
+      "title": "Mayonnaise",
+      "price": 0.5,
+      "description": "Creamy mayonnaise.",
+      "category": "dressings",
+      "image": "/public/images/mayo.png"
+    },
+    {
+      "id": 21,
+      "title": "Sweet Chilli Sauce",
+      "price": 0.75,
+      "description": "Sweet and spicy.",
+      "category": "dressings",
+      "image": "/public/images/sweetchilli.png"
+    },
+    {
+      "id": 22,
+      "title": "Caramel Sundae",
+      "price": 4.99,
+      "description": "Vanilla ice cream with caramel sauce and sprinkles.",
+      "category": "desserts",
+      "image": "/public/images/caramel.png"
+    },
+    {
+      "id": 23,
+      "title": "Classic Sundae",
+      "price": 3.99,
+      "description": "Classic vanilla ice cream with sprinkles.",
+      "category": "desserts",
+      "image": "/public/images/classicsundae.png"
+    },
+    {
+      "id": 24,
+      "title": "Mint Sundae",
+      "price": 4.49,
+      "description": "Vanilla ice cream with mint sprinkles",
+      "category": "desserts",
+      "image": "/public/images/mint.png"
+    },
+    {
+      "id": 25,
+      "title": "Milk Chocolate Cookie",
+      "price": 2.99,
+      "description": "The classic chocolate cookie.",
+      "category": "desserts",
+      "image": "/public/images/cookie.png"
+    }
+  ]
+}
