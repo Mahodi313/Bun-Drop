@@ -1,0 +1,63 @@
+body {
+  font-size: 18px;
+}
+
+#navbar {
+  height: 70px;
+  background: rgb(170, 24, 20);
+  background: linear-gradient(
+    0deg,
+    rgba(170, 24, 20, 1) 0%,
+    rgba(128, 19, 11, 1) 23%,
+    rgba(128, 19, 11, 1) 70%,
+    rgba(173, 23, 18, 1) 86%,
+    rgba(156, 19, 19, 1) 93%,
+    rgba(173, 24, 24, 1) 100%
+  );
+  color: white;
+}
+
+#navbar #nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  height: 100%;
+}
+
+#logo {
+  height: 65px;
+  width: auto;
+}
+#logo:hover {
+  transform: scale(1.01);
+}
+
+#nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#nav-list li {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  margin-right: 30px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+#shop-icon {
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+#shop-icon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
