@@ -1,7 +1,3 @@
-body {
-  font-size: 18px;
-}
-
 #navbar {
   height: 70px;
   background: rgb(170, 24, 20);
@@ -17,11 +13,10 @@ body {
   color: white;
 }
 
-#navbar #nav-wrapper {
+#nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
   padding: 0 20px;
   height: 100%;
 }
@@ -31,24 +26,33 @@ body {
   width: auto;
 }
 #logo:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
+}
+
+#menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 #nav-list {
   display: flex;
   align-items: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #nav-list li {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .nav-link {
   text-decoration: none;
   color: white;
-  margin-right: 30px;
+  font-weight: bold;
 }
+
 .nav-link:hover {
   text-decoration: underline;
 }
@@ -57,7 +61,48 @@ body {
   font-size: 1.5rem;
   margin-left: 30px;
 }
-#shop-icon:hover {
-  opacity: 0.8;
-  cursor: pointer;
+
+.icon-link {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #nav-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  #nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgb(170, 24, 20);
+    width: 100%;
+    display: none;
+    transition: all 0.3s ease;
+    height: 150px;
+  }
+
+  #nav-list.open {
+    display: flex;
+  }
+
+  #nav-list li {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #shop-icon {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
