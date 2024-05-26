@@ -3,7 +3,7 @@ import React from "react";
 import "./Home.styles.css";
 
 function Home() {
-  return <></>;
+  return <>Home</>;
 }
 
 export default Home;

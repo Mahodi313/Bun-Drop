@@ -1,5 +1,5 @@
 #navbar {
-  height: 70px;
+  height: 90px;
   background: rgb(170, 24, 20);
   background: linear-gradient(
     0deg,
@@ -22,7 +22,7 @@
 }
 
 #logo {
-  height: 65px;
+  height: 85px;
   width: auto;
 }
 #logo:hover {
@@ -51,6 +51,7 @@
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .nav-link:hover {
@@ -58,7 +59,7 @@
 }
 
 #shop-icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-left: 30px;
 }
 
@@ -86,7 +87,7 @@
     width: 100%;
     display: none;
     transition: all 0.3s ease;
-    height: 150px;
+    height: auto;
   }
 
   #nav-list.open {
@@ -101,8 +102,8 @@
   }
 
   #shop-icon {
-    margin-top: 10px;
     margin-left: 0;
     margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
