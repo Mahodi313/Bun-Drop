@@ -1,8 +1,12 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import "./Header.styles.css";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="header-section">
@@ -22,7 +26,14 @@ function Header() {
           <br />
           <p>Treat yourself to a feel-good meal today!</p>
           <br />
-          <button className="join-btn">Join now</button>
+          <button
+            onClick={() => {
+              navigate("/auth");
+            }}
+            className="join-btn"
+          >
+            Join now
+          </button>
         </div>
       </div>
     </>

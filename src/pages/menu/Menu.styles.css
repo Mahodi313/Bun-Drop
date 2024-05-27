@@ -1,0 +1,166 @@
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+
+  height: 90px;
+  background-color: #aa1814;
+  color: white;
+}
+
+#menu-title {
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.filter-section ul {
+  margin-top: 15px;
+  list-style: none;
+  padding: 0;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+
+.filter-section li h4 {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.filter-section li h4:hover {
+  text-decoration: underline;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+.burger-section {
+  color: black;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.burger-section-title {
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.burger-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.sides-section {
+  color: black;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.sides-section-title {
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.sides-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.drinks-section {
+  color: black;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.drinks-section-title {
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.drinks-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.dressings-section {
+  color: black;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.dressings-section-title {
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.dressings-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.desserts-section {
+  color: black;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.desserts-section-title {
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.desserts-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 1200px) {
+  .burger-products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .sides-products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .burger-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sides-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .burger-products {
+    grid-template-columns: 1fr;
+  }
+  .sides-products {
+    grid-template-columns: 1fr;
+  }
+  .product img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 390px) {
+  .burger-products {
+    grid-template-columns: 1fr;
+  }
+  .sides-products {
+    grid-template-columns: 1fr;
+  }
+}

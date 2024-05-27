@@ -1,11 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 import Header from "../../components/header/Header.component";
+import FavoriteBurger from "../../components/favorite-burger/FavoriteBurger.component";
 
 import useFetchData from "../../hooks/useFetchData";
 
 import "./Home.styles.css";
-import FavoriteBurger from "../../components/favorite-burger/FavoriteBurger.component";
 
 function Home() {
+  const navigate = useNavigate();
+
   const {
     data: products,
     loading,
@@ -36,7 +40,7 @@ function Home() {
             ) : randomBurgers.length > 0 ? (
               randomBurgers.map((p) => <FavoriteBurger key={p.id} burger={p} />)
             ) : (
-              <p>No favorites available.</p>
+              <p>No products available.</p>
             )}
           </div>
         </div>
@@ -44,7 +48,13 @@ function Home() {
           <div className="content-section">
             <div className="content-wrapper">
               <h2>Are you hungry?</h2>
-              <button>Order Online</button>
+              <button
+                onClick={() => {
+                  navigate("/menu");
+                }}
+              >
+                Order Online
+              </button>
             </div>
           </div>
           <div className="picture-section"></div>
