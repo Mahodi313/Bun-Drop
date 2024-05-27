@@ -49,6 +49,29 @@ function Home() {
           </div>
           <div className="picture-section"></div>
         </div>
+        <div className="reviews-section">
+          <h2>What our clients say</h2>
+          <div className="all-reviews-wrapper">
+            <div className="client-review">
+              <img src="/public/mike.png" alt="Mike Tyson" />
+              <h3>Mike Tyson</h3>
+              <p>The food from Bun Drop is from heaven!</p>
+              <div className="stars">★★★★★</div>
+            </div>
+            <div className="client-review">
+              <img src="/public/fayye.png" alt="King Faisal II" />
+              <h3>King Faisal II</h3>
+              <p>Best burgers I've tasted!</p>
+              <div className="stars">★★★★★</div>
+            </div>
+            <div className="client-review">
+              <img src="/public/steve.png" alt="Steve Jobs" />
+              <h3>Steve Jobs</h3>
+              <p>This food will get you right!</p>
+              <div className="stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
