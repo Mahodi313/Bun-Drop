@@ -40,7 +40,7 @@ function Home() {
             ) : randomBurgers.length > 0 ? (
               randomBurgers.map((p) => <FavoriteBurger key={p.id} burger={p} />)
             ) : (
-              <p>No favorites available.</p>
+              <p>No products available.</p>
             )}
           </div>
         </div>
