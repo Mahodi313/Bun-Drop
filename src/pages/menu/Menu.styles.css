@@ -33,6 +33,10 @@
   text-decoration: underline;
 }
 
+.blur {
+  filter: blur(4px);
+}
+
 .burger-section {
   color: black;
   padding: 10px;
