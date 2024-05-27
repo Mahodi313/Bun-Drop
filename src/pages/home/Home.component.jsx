@@ -40,6 +40,15 @@ function Home() {
             )}
           </div>
         </div>
+        <div className="third-section">
+          <div className="content-section">
+            <div className="content-wrapper">
+              <h2>Are you hungry?</h2>
+              <button>Order Online</button>
+            </div>
+          </div>
+          <div className="picture-section"></div>
+        </div>
       </div>
     </>
   );

@@ -27,6 +27,7 @@
   height: 40px;
   font-weight: bold;
   border-radius: 6px;
+  margin-bottom: 10px;
 }
 .join-btn:hover {
   cursor: pointer;
