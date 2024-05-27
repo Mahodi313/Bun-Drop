@@ -1,0 +1,13 @@
+.favorites-section {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.favorite-products-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
