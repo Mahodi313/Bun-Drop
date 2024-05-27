@@ -1,0 +1,40 @@
+.favoriteProduct {
+  width: 180px;
+  min-height: 250px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5ebdc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.favoriteProduct:hover {
+  transform: scale(1.005);
+}
+
+.favoriteProduct img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.favoriteProduct h5 {
+  color: #333;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.favoriteProduct a {
+  color: #4caf50;
+  font-size: 24px;
+  display: block;
+  margin-top: 8px;
+}
+
+.favoriteProduct a:hover {
+  color: #333;
+}
