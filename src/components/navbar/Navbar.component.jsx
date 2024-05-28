@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { CartContext } from "../../contexts/cart.context";
+
 import CartIcon from "../cart-icon/Cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 import "./Navbar.styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +12,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isCartOpen } = useContext(CartContext);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -46,6 +50,7 @@ function Navbar() {
             <CartIcon id="shop-icon" />
           </li>
         </ul>
+        {isCartOpen && <CartDropdown />}
       </div>
     </nav>
   );
