@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import CartIcon from "../cart-icon/Cart-icon.component";
+
 import "./Navbar.styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faShoppingCart,
-  faBars,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,9 +43,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/checkout" className="icon-link">
-              <FontAwesomeIcon id="shop-icon" icon={faShoppingCart} />
-            </Link>
+            <CartIcon id="shop-icon" />
           </li>
         </ul>
       </div>

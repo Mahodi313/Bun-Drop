@@ -25,6 +25,7 @@
   height: 85px;
   width: auto;
 }
+
 #logo:hover {
   transform: scale(1.02);
 }
@@ -79,7 +80,7 @@
 
   #nav-list {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     position: absolute;
     top: 70px;
     right: 0;
@@ -99,11 +100,5 @@
     margin-top: 20px;
     width: 100%;
     text-align: center;
-  }
-
-  #shop-icon {
-    margin-left: 0;
-    margin-top: 20px;
-    margin-bottom: 10px;
   }
 }
