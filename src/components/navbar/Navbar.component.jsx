@@ -46,9 +46,7 @@ function Navbar() {
               Sign In
             </Link>
           </li>
-          <li>
-            <CartIcon id="shop-icon" />
-          </li>
+          <CartIcon id="shop-icon" />
         </ul>
         {isCartOpen && <CartDropdown />}
       </div>
