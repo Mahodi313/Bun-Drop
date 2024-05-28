@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
+
+import { CartContext } from "../../contexts/cart.context";
 
 import "./Product.styles.css";
 
@@ -8,6 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 function Product(props) {
+  const { addItemToCart } = useContext(CartContext);
+
   return (
     <>
       <div className="product">
@@ -17,7 +21,9 @@ function Product(props) {
         <img src={props.product.image} alt={props.product.title} />
         <h4>{props.product.title}</h4>
         <p>$ {props.product.price}</p>
-        <button>Add to cart</button>
+        <button onClick={() => addItemToCart(props.product)}>
+          Add to cart
+        </button>
       </div>
     </>
   );

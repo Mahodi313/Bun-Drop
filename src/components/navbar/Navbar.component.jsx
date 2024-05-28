@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+
+import { CartContext } from "../../contexts/cart.context";
+
+import CartIcon from "../cart-icon/Cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+
 import "./Navbar.styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faShoppingCart,
-  faBars,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isCartOpen } = useContext(CartContext);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -43,12 +46,9 @@ function Navbar() {
               Sign In
             </Link>
           </li>
-          <li>
-            <Link to="/checkout" className="icon-link">
-              <FontAwesomeIcon id="shop-icon" icon={faShoppingCart} />
-            </Link>
-          </li>
+          <CartIcon id="shop-icon" />
         </ul>
+        {isCartOpen && <CartDropdown />}
       </div>
     </nav>
   );

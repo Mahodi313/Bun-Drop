@@ -24,7 +24,6 @@ function Menu() {
   const scrollToSection = (sectionRef, sectionName) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
     setActiveSection(sectionName);
-    console.log("Active section set to:", sectionName);
   };
 
   const clearFocus = () => {
