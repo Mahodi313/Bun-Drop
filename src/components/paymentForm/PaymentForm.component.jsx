@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { CartContext } from "../../contexts/cart.context";
 
 import "./PaymentForm.styles.css";
 
 function PaymentForm() {
+  const { cartTotal } = useContext(CartContext);
+
   return (
     <form className="payment-form">
       <div className="payment-wrapper">
@@ -81,7 +85,7 @@ function PaymentForm() {
           />
         </div>
       </div>
-      <p className="total-price">Total Price: $153.00</p>
+      <p className="total-price">Total Price: ${cartTotal}</p>
       <button type="submit" className="pay-button">
         Pay
       </button>
