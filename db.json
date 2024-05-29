@@ -200,5 +200,73 @@
       "category": "desserts",
       "image": "/public/images/cookie.png"
     }
+  ],
+  "orders": [
+    {
+      "id": "796a",
+      "orderId": "6d5de512-f378-438c-9cfd-e50e53be7103",
+      "customerName": "Mahdi Tysob",
+      "street": "Storgatan 6",
+      "city": "Malmö",
+      "cardNumber": "12343333",
+      "expDate": "12/2023",
+      "cvv": "321",
+      "": "a",
+      "products": [
+        {
+          "id": 1,
+          "title": "Classic Burger",
+          "price": 8.99,
+          "description": "A classic beef burger with lettuce, tomato, and cheese.",
+          "category": "burgers",
+          "image": "/public/images/classicburger.png",
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "title": "Cheeseburger",
+          "price": 9.49,
+          "description": "A juicy cheeseburger with melted cheddar cheese.",
+          "category": "burgers",
+          "image": "/public/images/cheeseburger.png",
+          "quantity": 1
+        }
+      ],
+      "paymentMethod": "card",
+      "totalPrice": 27.47
+    },
+    {
+      "id": "27f6",
+      "orderId": "24a54591-f4c8-4765-94c6-f6a20990cc66",
+      "customerName": "Mahdiiii Tysob",
+      "street": "Storgatan 6",
+      "city": "Malmö",
+      "cardNumber": "12343333",
+      "expDate": "12/2023",
+      "cvv": "321",
+      "": "a",
+      "products": [
+        {
+          "id": 1,
+          "title": "Classic Burger",
+          "price": 8.99,
+          "description": "A classic beef burger with lettuce, tomato, and cheese.",
+          "category": "burgers",
+          "image": "/public/images/classicburger.png",
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "title": "Cheeseburger",
+          "price": 9.49,
+          "description": "A juicy cheeseburger with melted cheddar cheese.",
+          "category": "burgers",
+          "image": "/public/images/cheeseburger.png",
+          "quantity": 1
+        }
+      ],
+      "paymentMethod": "card",
+      "totalPrice": 27.47
+    }
   ]
 }

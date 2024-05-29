@@ -56,3 +56,26 @@
   text-align: center;
   margin-bottom: 40px;
 }
+
+.payment-methods {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.secondLogo {
+  margin-left: 20px;
+}
+
+.payment-logo {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: 10px;
+}
+
+.payment-logo.selected {
+  border: 1px solid blue;
+  transform: scale(1.1);
+}
