@@ -1,11 +1,17 @@
 import React, { createContext, useEffect, useState } from "react";
-import { addCartItem } from "../utils/cart.utils";
+import {
+  addCartItem,
+  removeCartItem,
+  clearCartItem,
+} from "../utils/cart.utils";
 
 export const CartContext = createContext({
   isCartOpen: false,
   setIsCartOpen: () => {},
   cartItems: [],
   addItemToCart: () => {},
+  removeItemFromCart: () => {},
+  clearItemFromCart: () => {},
   cartCount: 0,
 });
 
@@ -26,10 +32,24 @@ export const CartProvider = ({ children }) => {
     setCartItems((prevCartItems) => addCartItem(prevCartItems, productToAdd));
   };
 
+  const removeProduct = (productToRemove) => {
+    setCartItems((prevCartItems) =>
+      removeCartItem(prevCartItems, productToRemove)
+    );
+  };
+
+  const clearItemFromCart = (productToRemove) => {
+    setCartItems((prevCartItems) =>
+      clearCartItem(prevCartItems, productToRemove)
+    );
+  };
+
   const value = {
     isCartOpen,
     setIsCartOpen,
     addItemToCart,
+    removeProduct,
+    clearItemFromCart,
     cartItems,
     cartCount,
   };
