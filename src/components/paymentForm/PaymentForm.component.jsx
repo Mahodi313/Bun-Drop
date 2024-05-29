@@ -7,7 +7,7 @@ import "./PaymentForm.styles.css";
 
 function PaymentForm() {
   const navigate = useNavigate();
-  const { cartTotal, cartItems } = useContext(CartContext);
+  const { cartTotal, cartItems, clearCart } = useContext(CartContext);
   const { postData } = usePostData();
   const [formData, setFormData] = useState({
     orderId: "",
@@ -62,7 +62,7 @@ function PaymentForm() {
 
       postData("http://localhost:3000/orders", orderToSubmit)
         .then((data) => {
-          console.log("Order added successfully:", data);
+          clearCart();
           navigate(`/order/${data.orderId}`);
         })
         .catch((error) => {
