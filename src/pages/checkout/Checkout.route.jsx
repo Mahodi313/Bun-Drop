@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,9 @@ import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Checkout() {
   const { cartItems } = useContext(CartContext);
+
   const navigate = useNavigate();
+
   return (
     <>
       <div className="checkout-wrapper">

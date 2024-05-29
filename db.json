@@ -200,5 +200,121 @@
       "category": "desserts",
       "image": "/public/images/cookie.png"
     }
+  ],
+  "orders": [
+    {
+      "id": "796a",
+      "orderId": "6d5de512-f378-438c-9cfd-e50e53be7103",
+      "customerName": "Mahdi Tysob",
+      "street": "Storgatan 6",
+      "city": "Malmö",
+      "cardNumber": "12343333",
+      "expDate": "12/2023",
+      "cvv": "321",
+      "": "a",
+      "products": [
+        {
+          "id": 1,
+          "title": "Classic Burger",
+          "price": 8.99,
+          "description": "A classic beef burger with lettuce, tomato, and cheese.",
+          "category": "burgers",
+          "image": "/public/images/classicburger.png",
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "title": "Cheeseburger",
+          "price": 9.49,
+          "description": "A juicy cheeseburger with melted cheddar cheese.",
+          "category": "burgers",
+          "image": "/public/images/cheeseburger.png",
+          "quantity": 1
+        }
+      ],
+      "paymentMethod": "card",
+      "totalPrice": 27.47
+    },
+    {
+      "id": "27f6",
+      "orderId": "24a54591-f4c8-4765-94c6-f6a20990cc66",
+      "customerName": "Mahdiiii Tysob",
+      "street": "Storgatan 6",
+      "city": "Malmö",
+      "cardNumber": "12343333",
+      "expDate": "12/2023",
+      "cvv": "321",
+      "": "a",
+      "products": [
+        {
+          "id": 1,
+          "title": "Classic Burger",
+          "price": 8.99,
+          "description": "A classic beef burger with lettuce, tomato, and cheese.",
+          "category": "burgers",
+          "image": "/public/images/classicburger.png",
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "title": "Cheeseburger",
+          "price": 9.49,
+          "description": "A juicy cheeseburger with melted cheddar cheese.",
+          "category": "burgers",
+          "image": "/public/images/cheeseburger.png",
+          "quantity": 1
+        }
+      ],
+      "paymentMethod": "card",
+      "totalPrice": 27.47
+    },
+    {
+      "id": "5566",
+      "orderId": "9ec60809-b997-4ede-ae7a-122e7ad8b691",
+      "customerName": "Alawi ",
+      "street": "dsadsad",
+      "city": "Malmö",
+      "phoneNumber": "07012345634",
+      "products": [
+        {
+          "id": 10,
+          "title": "Sweet Potato Fries",
+          "price": 4.99,
+          "description": "Crispy sweet potato fries topped with fresh parsley.",
+          "category": "sides",
+          "image": "/public/images/sweetpotatofries.png",
+          "quantity": 3
+        },
+        {
+          "id": 11,
+          "title": "Onion Rings",
+          "price": 3.99,
+          "description": "Golden, crispy onion rings served with dipping sauce.",
+          "category": "sides",
+          "image": "/public/images/onionrings.png",
+          "quantity": 3
+        },
+        {
+          "id": 4,
+          "title": "Salad Wrap Burger",
+          "price": 7.99,
+          "description": "A delicious burger with a lettuce wrap.",
+          "category": "burgers",
+          "image": "/public/images/saladwrapburger.png",
+          "quantity": 3
+        },
+        {
+          "id": 5,
+          "title": "Mushroom Swiss Burger",
+          "price": 11.49,
+          "description": "A beef burger topped with sautéed mushrooms and Swiss cheese.",
+          "category": "burgers",
+          "image": "/public/images/mushroomburger.png",
+          "quantity": 3
+        }
+      ],
+      "paymentMethod": "swish",
+      "totalPrice": 85.38
+    }
   ]
 }
