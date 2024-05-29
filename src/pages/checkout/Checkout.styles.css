@@ -1,0 +1,25 @@
+#back-icon {
+  color: #ad1818;
+  font-size: 40px;
+  margin-left: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#back-icon:hover {
+  color: #cc3700;
+  cursor: pointer;
+}
+
+.shopping-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.items-wrapper {
+  width: 100%;
+  background: #d9d9d9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}

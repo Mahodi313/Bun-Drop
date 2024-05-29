@@ -1,0 +1,58 @@
+.payment-wrapper {
+  background-color: #d9d9d9;
+  padding: 20px;
+  border-radius: 8px;
+  color: black;
+  margin-bottom: 20px;
+  width: auto;
+}
+
+.form-field {
+  display: block;
+  margin: 10px 0;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-text {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.pay-button {
+  width: auto;
+  max-width: 400px;
+  padding: 15px 150px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.pay-button:hover {
+  background-color: #59c25d;
+}
+
+#delivery-title {
+  margin-top: 40px;
+}
+
+.total-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
