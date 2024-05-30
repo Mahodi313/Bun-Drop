@@ -1,0 +1,113 @@
+.confirmation-wrapper {
+  background-color: #d9d9d9;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-title {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.confirmation-details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.confirmation-details h2,
+.confirmation-details h3 {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.confirmation-details p {
+  color: #333;
+  margin: 10px 0;
+}
+
+.confirmation-products {
+  list-style: none;
+  padding: 0;
+}
+
+.confirmation-product-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 10px;
+}
+
+.confirmation-product-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.confirmation-loading,
+.confirmation-error {
+  color: black;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.confirmation-message {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-message h2 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.confirmation-message p {
+  color: #444;
+  margin: 0;
+}
+
+.confirmation-go-back {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #599e47;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+.confirmation-go-back:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .confirmation-wrapper {
+    padding: 10px;
+  }
+
+  .confirmation-details {
+    padding: 10px;
+  }
+
+  .confirmation-product-image {
+    width: 40px;
+    height: 40px;
+  }
+}
