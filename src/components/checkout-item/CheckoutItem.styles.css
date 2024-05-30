@@ -3,10 +3,11 @@
   align-items: center;
   justify-content: space-between;
   background: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  transition: box-shadow 0.3s;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .cart-item:hover {
@@ -14,9 +15,10 @@
 }
 
 .cart-item img {
-  width: 70px;
+  width: 80px;
   height: auto;
   margin-right: 15px;
+  border-radius: 8px;
 }
 
 .cart-item div {
@@ -29,12 +31,14 @@
   flex: 3;
   font-weight: bold;
   text-align: left;
+  color: #333;
 }
 
 .cart-item p {
   flex: 1;
   font-weight: bold;
   text-align: center;
+  color: #333;
 }
 
 .quantity-wrapper {
@@ -54,6 +58,7 @@
   line-height: 30px;
   padding: 0;
   margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
 .quantity-wrapper button:hover {
@@ -62,7 +67,7 @@
 }
 
 .quantity-input {
-  width: 100px;
+  width: 50px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -77,6 +82,7 @@
   padding: 5px 10px;
   font-size: 16px;
   margin-left: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .remove-button:hover {
