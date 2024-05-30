@@ -9,7 +9,7 @@ import { CartContext } from "../../contexts/cart.context";
 import "./productDetails.styles.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function ProductDetails() {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ function ProductDetails() {
   return (
     <div className="product-details-wrapper">
       <button className="product-go-back" onClick={() => navigate(-1)}>
-        <FontAwesomeIcon icon={faArrowLeft} />
+        <FontAwesomeIcon className="details-back" icon={faCircleArrowLeft} />
       </button>
       <div className="product-card">
         <img
