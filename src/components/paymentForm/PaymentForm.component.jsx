@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../contexts/cart.context";
 import { v4 as uuidv4 } from "uuid";
 import "./PaymentForm.styles.css";
