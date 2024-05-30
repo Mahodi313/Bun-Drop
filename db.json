@@ -413,6 +413,84 @@
       ],
       "paymentMethod": "swish",
       "totalPrice": 18.48
+    },
+    {
+      "id": "6618",
+      "orderId": "dab758db-75e1-4b28-9eca-77b2f3e64d0a",
+      "customerName": "Alawi ",
+      "street": "Storgatan 6",
+      "city": "Malmö",
+      "cardNumber": "12",
+      "expDate": "12+3210",
+      "cvv": "2314214",
+      "products": [
+        {
+          "id": "6",
+          "title": "Double Cheeseburger",
+          "price": 12.99,
+          "description": "A double patty burger with double the cheese.",
+          "category": "burgers",
+          "image": "/public/images/doublecheeseburger.png",
+          "quantity": 2
+        }
+      ],
+      "paymentMethod": "card",
+      "totalPrice": 25.98
+    },
+    {
+      "id": "f527",
+      "orderId": "01071ac8-bb07-4b8c-985e-78af78c28fee",
+      "customerName": "dw",
+      "street": "Storgatan 6",
+      "city": "Malmö",
+      "cardNumber": "1234567891123456",
+      "expDate": "02/7777",
+      "cvv": "333",
+      "products": [
+        {
+          "id": "4",
+          "title": "Salad Wrap Burger",
+          "price": 7.99,
+          "description": "A delicious burger with a lettuce wrap.",
+          "category": "burgers",
+          "image": "/public/images/saladwrapburger.png",
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "title": "Mushroom Swiss Burger",
+          "price": 11.49,
+          "description": "A beef burger topped with sautéed mushrooms and Swiss cheese.",
+          "category": "burgers",
+          "image": "/public/images/mushroomburger.png",
+          "quantity": 1
+        }
+      ],
+      "paymentMethod": "card",
+      "totalPrice": 19.48
+    },
+    {
+      "id": "bad7",
+      "orderId": "77ce592a-b79e-4bf2-a30d-21103654393f",
+      "customerName": "Mehdi Test",
+      "street": "Hej op dgi ",
+      "city": "sdasda",
+      "cardNumber": "4444444444444444",
+      "expDate": "02/2025",
+      "cvv": "123",
+      "products": [
+        {
+          "id": "2",
+          "title": "Cheeseburger",
+          "price": 9.49,
+          "description": "A juicy cheeseburger with melted cheddar cheese.",
+          "category": "burgers",
+          "image": "/public/images/cheeseburger.png",
+          "quantity": 1
+        }
+      ],
+      "paymentMethod": "card",
+      "totalPrice": 9.49
     }
   ]
 }
