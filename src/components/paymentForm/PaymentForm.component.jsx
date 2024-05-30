@@ -1,14 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import usePostData from "../../hooks/usePostData";
 import { CartContext } from "../../contexts/cart.context";
 import { v4 as uuidv4 } from "uuid";
 import "./PaymentForm.styles.css";
 
-function PaymentForm() {
-  const navigate = useNavigate();
-  const { cartTotal, cartItems, clearCart } = useContext(CartContext);
-  const { postData } = usePostData();
+function PaymentForm(props) {
+  const { cartTotal, cartItems } = useContext(CartContext);
   const [formData, setFormData] = useState({
     orderId: "",
     customerName: "",
@@ -60,14 +56,7 @@ function PaymentForm() {
         delete orderToSubmit.cvv;
       }
 
-      postData("http://localhost:3000/orders", orderToSubmit)
-        .then((data) => {
-          clearCart();
-          navigate(`/order/${data.orderId}`);
-        })
-        .catch((error) => {
-          console.error("Error adding order:", error);
-        });
+      props.onHandleOrder(orderToSubmit);
     }
   };
 

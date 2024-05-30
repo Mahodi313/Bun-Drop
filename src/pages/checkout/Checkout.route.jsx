@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import CheckoutItem from "../../components/checkout-item/CheckoutItem.component";
 import PaymentForm from "../../components/paymentForm/PaymentForm.component";
 
+import usePostData from "../../hooks/usePostData";
+
 import { CartContext } from "../../contexts/cart.context";
 
 import "./Checkout.styles.css";
@@ -13,9 +15,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Checkout() {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, clearCart } = useContext(CartContext);
 
   const navigate = useNavigate();
+
+  const { postData } = usePostData();
+
+  const handleOrder = (orderToAdd) => {
+    postData("http://localhost:3000/orders", orderToAdd)
+      .then((data) => {
+        clearCart();
+        navigate(`/order/${data.id}`);
+      })
+      .catch((error) => {
+        console.error("Error adding order:", error);
+      });
+  };
 
   return (
     <>
@@ -33,7 +48,7 @@ function Checkout() {
             <p>Your cart is empty.</p>
           )}
         </div>
-        <PaymentForm />
+        <PaymentForm onHandleOrder={handleOrder} />
       </div>
     </>
   );
