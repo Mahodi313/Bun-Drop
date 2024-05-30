@@ -16,6 +16,7 @@ function PaymentForm(props) {
     phoneNumber: "",
   });
   const [paymentMethod, setPaymentMethod] = useState("card");
+  const [errors, setErrors] = useState({});
 
   // Generates a unique orderId when the component mounts
   useEffect(() => {
@@ -37,10 +38,44 @@ function PaymentForm(props) {
     }));
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (formData.customerName.trim() === "") {
+      newErrors.customerName = "Full name is required";
+    }
+    if (formData.street.trim() === "") {
+      newErrors.street = "Street adress is required.";
+    }
+    if (formData.city.trim() === "") {
+      newErrors.city = "City is required.";
+    }
+
+    if (paymentMethod === "card") {
+      if (!/^\d{16}$/.test(formData.cardNumber)) {
+        newErrors.cardNumber = "Card Number must be 16 digits.";
+      }
+      if (!/^(0[1-9]|1[0-2])\/\d{4}$/.test(formData.expDate)) {
+        newErrors.expDate = "Expiration Date must be in MM/YYYY format.";
+      }
+      if (!/^\d{3,4}$/.test(formData.cvv)) {
+        newErrors.cvv = "CVV must be 3 or 4 digits.";
+      }
+    } else if (paymentMethod === "swish") {
+      if (!/^\d{10}$/.test(formData.phoneNumber)) {
+        newErrors.phoneNumber = "Phone Number must be 10 digits.";
+      }
+    }
+
+    setErrors(newErrors);
+    // This checks if there are any errors and returns true or false.
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (cartItems.length > 0) {
+    if (cartItems.length > 0 && validateForm()) {
       const orderToSubmit = {
         ...formData,
         products: cartItems,
@@ -96,8 +131,10 @@ function PaymentForm(props) {
                 placeholder="XXXX XXXX XXXX XXXX"
                 value={formData.cardNumber}
                 onChange={handleChange}
-                required
               />
+              {errors.cardNumber && (
+                <p className="error">{errors.cardNumber}</p>
+              )}
             </div>
             <div className="form-field">
               <label className="input-label" htmlFor="exp-date">
@@ -111,8 +148,8 @@ function PaymentForm(props) {
                 placeholder="MM/YYYY"
                 value={formData.expDate}
                 onChange={handleChange}
-                required
               />
+              {errors.expDate && <p className="error">{errors.expDate}</p>}
             </div>
             <div className="form-field">
               <label className="input-label" htmlFor="cvv">
@@ -126,8 +163,8 @@ function PaymentForm(props) {
                 placeholder="123"
                 value={formData.cvv}
                 onChange={handleChange}
-                required
               />
+              {errors.cvv && <p className="error">{errors.cvv}</p>}
             </div>
           </>
         )}
@@ -141,11 +178,13 @@ function PaymentForm(props) {
               id="phone-number"
               name="phoneNumber"
               className="input-text"
-              placeholder="Phone Number"
+              placeholder="0760006591"
               value={formData.phoneNumber}
               onChange={handleChange}
-              required
             />
+            {errors.phoneNumber && (
+              <p className="error">{errors.phoneNumber}</p>
+            )}
           </div>
         )}
         <h2 id="delivery-title">Delivery</h2>
@@ -161,8 +200,10 @@ function PaymentForm(props) {
             placeholder="Full Name"
             value={formData.customerName}
             onChange={handleChange}
-            required
           />
+          {errors.customerName && (
+            <p className="error">{errors.customerName}</p>
+          )}
         </div>
         <div className="form-field">
           <label className="input-label" htmlFor="street">
@@ -176,8 +217,8 @@ function PaymentForm(props) {
             placeholder="Street Address"
             value={formData.street}
             onChange={handleChange}
-            required
           />
+          {errors.street && <p className="error">{errors.street}</p>}
         </div>
         <div className="form-field">
           <label className="input-label" htmlFor="city">
@@ -191,8 +232,8 @@ function PaymentForm(props) {
             placeholder="City"
             value={formData.city}
             onChange={handleChange}
-            required
           />
+          {errors.city && <p className="error">{errors.city}</p>}
         </div>
       </div>
       <p className="total-price">Total Price: ${cartTotal}</p>

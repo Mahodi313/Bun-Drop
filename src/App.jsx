@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer.component";
 import Menu from "./pages/menu/Menu.route";
 import Checkout from "./pages/checkout/Checkout.route";
 import Confirmation from "./pages/confirmation/confirmation.route";
+import ProductDetails from "./pages/product-details/productDetails.route";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order/:id" element={<Confirmation />} />
