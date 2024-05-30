@@ -15,7 +15,7 @@ function Product(props) {
   return (
     <>
       <div className="product">
-        <Link to={`product/${props.product.id}`}>
+        <Link to={`/product/${props.product.id}`}>
           <FontAwesomeIcon icon={faCircleInfo} />
         </Link>
         <img src={props.product.image} alt={props.product.title} />
