@@ -2,6 +2,9 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext({
   user: null,
+  setUser: () => {},
+  login: () => {},
+  signOut: () => {},
 });
 
 export const AuthProvider = ({ children }) => {
@@ -71,6 +74,7 @@ export const AuthProvider = ({ children }) => {
     login,
     signOut,
     addFavorite,
+    setUser,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
