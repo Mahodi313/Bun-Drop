@@ -64,25 +64,34 @@ function SignUpForm(props) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const isValid = validateForm();
+    validateForm()
+      .then((isValid) => {
+        if (isValid) {
+          const newAccount = {
+            username: formData.username,
+            password: formData.password,
+            favorites: [],
+          };
 
-    if (isValid) {
-      const newAccount = {
-        username: formData.username,
-        password: formData.password,
-        favorites: [],
-      };
-
-      props.onCreateAccount(newAccount);
-
-      setFormData({
-        username: "",
-        password: "",
-        confirmPassword: "",
+          // Create account if validation passes
+          return props.onCreateAccount(newAccount);
+        } else {
+          return Promise.reject("Validation failed");
+        }
+      })
+      .then(() => {
+        setFormData({
+          username: "",
+          password: "",
+          confirmPassword: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Error creating account:", error);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-    }
-
-    setIsSubmitting(false);
   };
 
   return (

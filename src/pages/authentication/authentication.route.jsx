@@ -14,15 +14,16 @@ function Authentication() {
   const { setUser } = useContext(AuthContext);
 
   const handleCreationAccount = (account) => {
-    try {
-      const newUser = postData("http://localhost:3000/users", account);
-      if (newUser) {
-        localStorage.setItem("user", JSON.stringify(newUser));
-        setUser(newUser);
-      }
-    } catch (error) {
-      console.error("Error adding account:", error);
-    }
+    postData("http://localhost:3000/users", account)
+      .then((newUser) => {
+        if (newUser) {
+          localStorage.setItem("user", JSON.stringify(newUser));
+          setUser(newUser);
+        }
+      })
+      .catch((error) => {
+        console.error("Error adding account:", error);
+      });
   };
   return (
     <>

@@ -202,5 +202,12 @@
     }
   ],
   "orders": [],
-  "users": []
+  "users": [
+    {
+      "id": "90be",
+      "username": "user1",
+      "password": "123",
+      "favorites": []
+    }
+  ]
 }
