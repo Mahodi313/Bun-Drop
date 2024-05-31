@@ -43,71 +43,14 @@
   cursor: pointer;
 }
 
-@media (max-width: 992px) {
-  .cart-dropdown-container {
-    width: 80%;
-    height: auto;
-    top: 90px;
-    right: 10%;
-    left: 10%;
-    border: 1px solid black;
-    border-radius: 5px;
-  }
-}
-
 @media (max-width: 768px) {
   .cart-dropdown-container {
     width: 90%;
     height: auto;
     top: auto;
-    bottom: -300px;
+    bottom: -850px;
     right: 5%;
     left: 5%;
-    border: none;
-    border-top: 1px solid black;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-100%);
-  }
-}
-
-@media (max-width: 576px) {
-  .cart-dropdown-container {
-    width: 95%;
-    height: auto;
-    top: auto;
-    bottom: -300px;
-    right: 2.5%;
-    left: 2.5%;
-    border: none;
-    border-top: 1px solid black;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-100%);
-  }
-}
-
-@media (max-width: 390px) {
-  .cart-dropdown-container {
-    width: 95%;
-    height: auto;
-    top: auto;
-    bottom: -70px;
-    right: 2.5%;
-    left: 2.5%;
-    border: none;
-    border-top: 1px solid black;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-100%);
-  }
-}
-
-@media (max-width: 375px) {
-  .cart-dropdown-container {
-    width: 95%;
-    height: auto;
-    top: auto;
-    bottom: -250px;
-    right: 2.5%;
-    left: 2.5%;
     border: none;
     border-top: 1px solid black;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
