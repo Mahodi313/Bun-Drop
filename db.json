@@ -238,13 +238,55 @@
       "id": "a288",
       "username": "user2",
       "password": "123",
-      "favorites": []
+      "favorites": [
+        {
+          "id": "2",
+          "title": "Cheeseburger",
+          "price": 9.49,
+          "description": "A juicy cheeseburger with melted cheddar cheese.",
+          "category": "burgers",
+          "image": "/public/images/cheeseburger.png"
+        },
+        {
+          "id": "3",
+          "title": "Bacon Burger",
+          "price": 10.99,
+          "description": "A beef burger topped with crispy bacon and BBQ sauce.",
+          "category": "burgers",
+          "image": "/public/images/baconburger.png"
+        },
+        {
+          "id": "5",
+          "title": "Mushroom Swiss Burger",
+          "price": 11.49,
+          "description": "A beef burger topped with sautéed mushrooms and Swiss cheese.",
+          "category": "burgers",
+          "image": "/public/images/mushroomburger.png"
+        }
+      ]
     },
     {
       "id": "21f6",
       "username": "user3",
       "password": "123",
-      "favorites": []
+      "favorites": [
+        {
+          "id": "9",
+          "title": "Fish Burger",
+          "price": 9.99,
+          "description": "A crispy fish fillet burger with tartar sauce.",
+          "category": "burgers",
+          "image": "/public/images/fishburger.png"
+        },
+        {
+          "id": "3",
+          "title": "Bacon Burger",
+          "price": 10.99,
+          "description": "A beef burger topped with crispy bacon and BBQ sauce.",
+          "category": "burgers",
+          "image": "/public/images/baconburger.png"
+        }
+      ]
     }
   ]
 }

@@ -8,6 +8,7 @@ import Checkout from "./pages/checkout/Checkout.route";
 import Confirmation from "./pages/confirmation/confirmation.route";
 import ProductDetails from "./pages/product-details/productDetails.route";
 import Authentication from "./pages/authentication/authentication.route";
+import Favorites from "./pages/favorites/favorites.route";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order/:id" element={<Confirmation />} />
             <Route path="/auth" element={<Authentication />} />
+            <Route path="/favorites" element={<Favorites />} />
           </Routes>
         </main>
         <Footer />
