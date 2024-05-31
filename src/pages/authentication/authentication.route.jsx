@@ -11,7 +11,7 @@ import "./authentication.styles.css";
 
 function Authentication() {
   const { postData } = usePostData();
-  const { setUser } = useContext(AuthContext);
+  const { setUser, login } = useContext(AuthContext);
 
   const handleCreationAccount = (account) => {
     postData("http://localhost:3000/users", account)
@@ -25,10 +25,15 @@ function Authentication() {
         console.error("Error adding account:", error);
       });
   };
+
+  const handleSignIn = (username, password) => {
+    return login(username, password);
+  };
+
   return (
     <>
       <div className="auth-wrapper">
-        <SignInForm />
+        <SignInForm onSignIn={handleSignIn} />
         <SignUpForm onCreateAccount={handleCreationAccount} />
       </div>
     </>

@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (username, password) => {
-    fetch(
+    return fetch(
       `http://localhost:3000/users?username=${username}&password=${password}`
     )
       .then((res) => res.json())
@@ -25,6 +25,7 @@ export const AuthProvider = ({ children }) => {
           setUser(data[0]);
         } else {
           console.error("Invalid credentials");
+          throw new Error("Invalid credentials");
         }
       });
   };

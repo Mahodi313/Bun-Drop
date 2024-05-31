@@ -3,7 +3,7 @@ import FormInput from "../form-input/form.input.component";
 
 import "./sign-in-form-styles.css";
 
-function SignInForm() {
+function SignInForm(props) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -34,6 +34,31 @@ function SignInForm() {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    if (validateForm()) {
+      props
+        .onSignIn(formData.username, formData.password)
+        .then(() => {
+          setFormData({
+            username: "",
+            password: "",
+          });
+        })
+        .catch((error) => {
+          console.error("Error signing in:", error);
+          setErrors({ form: "Invalid username or password" });
+        })
+        .finally(() => {
+          setIsSubmitting(false);
+        });
+    } else {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="sign-up-container">
       <h2>Already have an account?</h2>
@@ -44,7 +69,6 @@ function SignInForm() {
         <FormInput
           label="Username"
           type="text"
-          required
           name="username"
           value={formData.username}
           onChange={handleChange}
@@ -53,7 +77,6 @@ function SignInForm() {
         <FormInput
           label="Password"
           type="password"
-          required
           name="password"
           value={formData.password}
           onChange={handleChange}
