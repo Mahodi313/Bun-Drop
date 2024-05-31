@@ -8,7 +8,6 @@ function SignUpForm(props) {
     username: "",
     password: "",
     confirmPassword: "",
-    favorites: [],
   });
 
   const [errors, setErrors] = useState({});
@@ -68,7 +67,13 @@ function SignUpForm(props) {
     const isValid = validateForm();
 
     if (isValid) {
-      props.onCreateAccount(formData);
+      const newAccount = {
+        username: formData.username,
+        password: formData.password,
+        favorites: [],
+      };
+
+      props.onCreateAccount(newAccount);
 
       setFormData({
         username: "",

@@ -202,20 +202,5 @@
     }
   ],
   "orders": [],
-  "users": [
-    {
-      "id": "81aa",
-      "username": "user1",
-      "password": "123",
-      "confirmPassword": "123",
-      "favorites": []
-    },
-    {
-      "id": "9adb",
-      "username": "user1",
-      "password": "123",
-      "confirmPassword": "123",
-      "favorites": []
-    }
-  ]
+  "users": []
 }

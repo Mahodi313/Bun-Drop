@@ -1,5 +1,3 @@
-import React from "react";
-
 import usePostData from "../../hooks/usePostData";
 
 import SignInForm from "../../components/sign-in-form/sign-in-form.component";
