@@ -6,7 +6,7 @@
 .group .form-input {
   background: none;
   background-color: white;
-  color: grey;
+  color: rgb(0, 0, 0);
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;

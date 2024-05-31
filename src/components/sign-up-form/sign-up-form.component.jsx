@@ -1,13 +1,23 @@
+import { useState } from "react";
 import FormInput from "../form-input/form.input.component";
 
 import "./sign-up-form.styles.css";
 
 function SignUpForm() {
-  const formFields = {
+  const [formData, setFormData] = useState({
     username: "",
     password: "",
     confirmPassword: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
+
   return (
     <>
       {" "}
@@ -20,7 +30,8 @@ function SignUpForm() {
             type="text"
             required
             name="username"
-            value={formFields.username}
+            value={formData.username}
+            onChange={handleChange}
           />
 
           <FormInput
@@ -28,7 +39,8 @@ function SignUpForm() {
             type="password"
             required
             name="password"
-            value={formFields.password}
+            value={formData.password}
+            onChange={handleChange}
           />
 
           <FormInput
@@ -36,7 +48,8 @@ function SignUpForm() {
             type="password"
             required
             name="confirmPassword"
-            value={formFields.confirmPassword}
+            value={formData.confirmPassword}
+            onChange={handleChange}
           />
           <div className="buttons-container">
             <button className="signUp-btn" type="submit">

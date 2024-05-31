@@ -4,9 +4,17 @@ import FormInput from "../form-input/form.input.component";
 import "./sign-in-form-styles.css";
 
 function SignInForm() {
-  const formFields = {
+  const [formData, setFormData] = useState({
     username: "",
     password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   return (
@@ -19,14 +27,16 @@ function SignInForm() {
           type="text"
           required
           name="username"
-          value={formFields.username}
+          value={formData.username}
+          onChange={handleChange}
         />
         <FormInput
           label="Password"
           type="password"
           required
           name="password"
-          value={formFields.password}
+          value={formData.password}
+          onChange={handleChange}
         />
         <div className="buttons-container">
           <button className="login-btn" type="submit">
