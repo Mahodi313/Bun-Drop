@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
 
 import { CartContext } from "../../contexts/cart.context";
+import { AuthContext } from "../../contexts/auth.context";
 
 import "./productDetails.styles.css";
 
@@ -14,6 +15,7 @@ import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 function ProductDetails() {
   const navigate = useNavigate();
   const { id } = useParams();
+  const { user, addFavorite } = useContext(AuthContext);
 
   const {
     data: product,
@@ -47,6 +49,18 @@ function ProductDetails() {
         >
           Add to cart
         </button>
+        <br />
+        <br />
+        {user ? (
+          <button
+            className="product-add-to-favorite"
+            onClick={() => addFavorite(product)}
+          >
+            Add to favorites
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

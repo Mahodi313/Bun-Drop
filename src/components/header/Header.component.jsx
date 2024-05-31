@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 
 import { useNavigate } from "react-router-dom";
+
+import { AuthContext } from "../../contexts/auth.context";
 
 import "./Header.styles.css";
 
 function Header() {
   const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
 
   return (
     <>
@@ -26,14 +29,18 @@ function Header() {
           <br />
           <p>Treat yourself to a feel-good meal today!</p>
           <br />
-          <button
-            onClick={() => {
-              navigate("/auth");
-            }}
-            className="join-btn"
-          >
-            Join now
-          </button>
+          {user ? (
+            ""
+          ) : (
+            <button
+              onClick={() => {
+                navigate("/auth");
+              }}
+              className="join-btn"
+            >
+              Join now
+            </button>
+          )}
         </div>
       </div>
     </>

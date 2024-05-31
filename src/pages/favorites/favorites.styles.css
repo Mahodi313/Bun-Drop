@@ -1,0 +1,26 @@
+.notLoggedIn {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.nofavorite {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.favorites-wrapper {
+  color: black;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.favorite-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.favorite-section-title {
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
