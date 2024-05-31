@@ -1,6 +1,8 @@
 import React, { createContext, useState, useEffect } from "react";
 
-export const AuthContext = createContext();
+export const AuthContext = createContext({
+  user: null,
+});
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -12,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  const login = async (username, password) => {
+  const login = (username, password) => {
     fetch(
       `http://localhost:3000/users?username=${username}&password=${password}`
     )

@@ -9,6 +9,23 @@ function SignInForm() {
     password: "",
   });
 
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (formData.username.trim() === "") {
+      newErrors.username = "Username is required.";
+    }
+    if (formData.password.trim() === "") {
+      newErrors.password = "Password is required.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -21,7 +38,9 @@ function SignInForm() {
     <div className="sign-up-container">
       <h2>Already have an account?</h2>
       <span>Sign in with your username and password</span>
-      <form>
+      <form onSubmit={handleSubmit}>
+        {errors.form && <p className="error">{errors.form}</p>}
+        {errors.username && <p className="error">{errors.username}</p>}
         <FormInput
           label="Username"
           type="text"
@@ -30,6 +49,7 @@ function SignInForm() {
           value={formData.username}
           onChange={handleChange}
         />
+        {errors.password && <p className="error">{errors.password}</p>}
         <FormInput
           label="Password"
           type="password"
@@ -40,7 +60,7 @@ function SignInForm() {
         />
         <div className="buttons-container">
           <button className="login-btn" type="submit">
-            Sign in
+            {isSubmitting ? "Signing in..." : "Sign in"}
           </button>
         </div>
       </form>

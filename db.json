@@ -208,6 +208,12 @@
       "username": "user1",
       "password": "123",
       "favorites": []
+    },
+    {
+      "id": "a288",
+      "username": "user2",
+      "password": "123",
+      "favorites": []
     }
   ]
 }
