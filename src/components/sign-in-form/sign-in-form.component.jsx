@@ -30,7 +30,7 @@ function SignInForm() {
         />
         <div className="buttons-container">
           <button className="login-btn" type="submit">
-            Sign In
+            Sign in
           </button>
         </div>
       </form>
