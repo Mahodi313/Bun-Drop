@@ -35,10 +35,42 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
+  const addFavorite = (favoriteItem) => {
+    if (!user) {
+      return;
+    }
+
+    if (user.favorites.some((item) => item.id === favoriteItem.id)) {
+      return;
+    }
+
+    const updatedUser = {
+      ...user,
+      favorites: [...user.favorites, favoriteItem],
+    };
+
+    return fetch(`http://localhost:3000/users/${user.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedUser),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        localStorage.setItem("user", JSON.stringify(data));
+        setUser(data);
+      })
+      .catch((error) => {
+        console.error("Error updating user", error);
+      });
+  };
+
   const value = {
     user,
     login,
     signOut,
+    addFavorite,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

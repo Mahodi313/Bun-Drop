@@ -207,7 +207,32 @@
       "id": "90be",
       "username": "user1",
       "password": "123",
-      "favorites": []
+      "favorites": [
+        {
+          "id": "7",
+          "title": "BBQ Burger",
+          "price": 9.99,
+          "description": "A beef burger with BBQ sauce and onion rings.",
+          "category": "burgers",
+          "image": "/public/images/bbqburger.png"
+        },
+        {
+          "id": "7",
+          "title": "BBQ Burger",
+          "price": 9.99,
+          "description": "A beef burger with BBQ sauce and onion rings.",
+          "category": "burgers",
+          "image": "/public/images/bbqburger.png"
+        },
+        {
+          "id": "1",
+          "title": "Classic Burger",
+          "price": 8.99,
+          "description": "A classic beef burger with lettuce, tomato, and cheese.",
+          "category": "burgers",
+          "image": "/public/images/classicburger.png"
+        }
+      ]
     },
     {
       "id": "a288",
