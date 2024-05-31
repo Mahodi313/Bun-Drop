@@ -7,6 +7,7 @@ import Menu from "./pages/menu/Menu.route";
 import Checkout from "./pages/checkout/Checkout.route";
 import Confirmation from "./pages/confirmation/confirmation.route";
 import ProductDetails from "./pages/product-details/productDetails.route";
+import Authentication from "./pages/authentication/authentication.route";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order/:id" element={<Confirmation />} />
+            <Route path="/auth" element={<Authentication />} />
           </Routes>
         </main>
         <Footer />

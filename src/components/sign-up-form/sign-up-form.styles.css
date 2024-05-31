@@ -1,0 +1,30 @@
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+
+.sign-up-container h2 {
+  margin: 10px 0;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.signUp-btn {
+  background-color: #2d3689;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  width: 150px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.signUp-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

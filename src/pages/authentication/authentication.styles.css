@@ -1,0 +1,13 @@
+.auth-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+  margin: 30px auto;
+}
+
+@media (max-width: 768px) {
+  .auth-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

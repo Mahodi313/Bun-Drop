@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { CartContext } from "../../contexts/cart.context";
+import { AuthContext } from "../../contexts/auth.context";
 
 import CartIcon from "../cart-icon/Cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
@@ -13,6 +14,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { isCartOpen } = useContext(CartContext);
+  const { user, signOut } = useContext(AuthContext);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -37,15 +39,31 @@ function Navbar() {
               Menu
             </Link>
           </li>
-          <li>
-            <Link
-              className="nav-link"
-              to="/login"
-              onClick={() => setMenuOpen(false)}
-            >
-              Sign In
-            </Link>
-          </li>
+
+          {user ? (
+            <>
+              <li>
+                <Link className="nav-link" to="#" onClick={() => signOut()}>
+                  Sign Out
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-link" to="/favorites">
+                  Favorites
+                </Link>
+              </li>
+            </>
+          ) : (
+            <li>
+              <Link
+                className="nav-link"
+                to="/auth"
+                onClick={() => setMenuOpen(false)}
+              >
+                Sign In
+              </Link>
+            </li>
+          )}
           <CartIcon id="shop-icon" />
         </ul>
         {isCartOpen && <CartDropdown />}
