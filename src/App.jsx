@@ -9,6 +9,7 @@ import Confirmation from "./pages/confirmation/confirmation.route";
 import ProductDetails from "./pages/product-details/productDetails.route";
 import Authentication from "./pages/authentication/authentication.route";
 import Favorites from "./pages/favorites/favorites.route";
+import AboutUs from "./pages/about-us/about-us.route";
 
 import "./App.css";
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/order/:id" element={<Confirmation />} />
             <Route path="/auth" element={<Authentication />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="/aboutus" element={<AboutUs />} />
           </Routes>
         </main>
         <Footer />
