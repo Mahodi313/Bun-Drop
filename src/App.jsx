@@ -12,6 +12,7 @@ import Favorites from "./pages/favorites/favorites.route";
 import AboutUs from "./pages/about-us/about-us.route";
 
 import "./App.css";
+import NotFound from "./pages/not-found/not-found.route";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/auth" element={<Authentication />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
