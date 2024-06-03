@@ -5,6 +5,8 @@ export const AuthContext = createContext({
   setUser: () => {},
   login: () => {},
   signOut: () => {},
+  addFavorite: () => {},
+  removeFavorite: () => {},
 });
 
 export const AuthProvider = ({ children }) => {
@@ -69,11 +71,39 @@ export const AuthProvider = ({ children }) => {
       });
   };
 
+  const removeFavorite = (favoriteItem) => {
+    if (!user) {
+      return;
+    }
+
+    const updatedUser = {
+      ...user,
+      favorites: user.favorites.filter((item) => item.id !== favoriteItem.id),
+    };
+
+    return fetch(`http://localhost:3000/users/${user.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedUser),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        localStorage.setItem("user", JSON.stringify(data));
+        setUser(data);
+      })
+      .catch((error) => {
+        console.error("Error updating user:", error);
+      });
+  };
+
   const value = {
     user,
     login,
     signOut,
     addFavorite,
+    removeFavorite,
     setUser,
   };
 

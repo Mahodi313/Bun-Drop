@@ -31,7 +31,6 @@
 }
 
 .favorite-item button {
-  background-color: #4caf50;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -45,4 +44,21 @@
 
 .favorite-item button:hover {
   opacity: 0.8;
+}
+
+.add-cart {
+  background-color: #4caf50;
+}
+
+.remove-fav {
+  background-color: #ad1712;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 5px;
+  font-size: 18px;
 }

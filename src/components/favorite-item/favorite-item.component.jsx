@@ -15,8 +15,17 @@ function FavoriteItem(props) {
           <h3>{props.favorite.title}</h3>
           <p>{props.favorite.description}</p>
           <p>${props.favorite.price}</p>
-          <button onClick={() => props.onAddToCart(props.favorite)}>
+          <button
+            className="add-cart"
+            onClick={() => props.onAddToCart(props.favorite)}
+          >
             Add to cart
+          </button>
+          <button
+            className="remove-fav"
+            onClick={() => props.onRemoveFavoriteItem(props.favorite)}
+          >
+            Remove
           </button>
         </div>
       </div>
