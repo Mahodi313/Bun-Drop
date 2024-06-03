@@ -8,7 +8,7 @@ import FavoriteItem from "../../components/favorite-item/favorite-item.component
 import "./favorites.styles.css";
 
 function Favorites() {
-  const { user } = useContext(AuthContext);
+  const { user, removeFavorite } = useContext(AuthContext);
   const { addItemToCart } = useContext(CartContext);
 
   const handleAddToCart = (product) => {
@@ -27,6 +27,7 @@ function Favorites() {
                   key={food.id}
                   favorite={food}
                   onAddToCart={handleAddToCart}
+                  onRemoveFavoriteItem={removeFavorite}
                 />
               ))
             ) : (
