@@ -55,8 +55,17 @@ function PaymentForm(props) {
       if (!/^\d{16}$/.test(formData.cardNumber)) {
         newErrors.cardNumber = "Card Number must be 16 digits.";
       }
-      if (!/^(0[1-9]|1[0-2])\/\d{4}$/.test(formData.expDate)) {
+      const expDateRegex = /^(0[1-9]|1[0-2])\/\d{4}$/;
+      if (!expDateRegex.test(formData.expDate)) {
         newErrors.expDate = "Expiration Date must be in MM/YYYY format.";
+      } else {
+        const [month, year] = formData.expDate.split("/").map(Number);
+        const now = new Date();
+        const expDate = new Date(year, month - 1);
+
+        if (expDate < now) {
+          newErrors.expDate = "Expiration Date cannot be in the past.";
+        }
       }
       if (!/^\d{3,4}$/.test(formData.cvv)) {
         newErrors.cvv = "CVV must be 3 or 4 digits.";
